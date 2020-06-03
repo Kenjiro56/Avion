@@ -7,8 +7,8 @@ public class aircraftcontroller : MonoBehaviour
 
 
     // Start is called before the first frame update
-    public float speed = 10.0f;
-    
+    public float speed;
+    public GameObject navigator;
     void Start(){
        
     }
@@ -16,30 +16,30 @@ public class aircraftcontroller : MonoBehaviour
     // Update is called once per frame
     void Update(){
         Vector3 ang = this.transform.localEulerAngles;
-        ang.x = 0;
+        //ang.x = 0;
         this.transform.Translate(Vector3.right * Time.deltaTime * -speed);
-        float angle = 0.5f;
+        float angle = 1.0f;
         if (Input.GetKey(KeyCode.UpArrow)) {
             //transform.position += new Vector3(0.0f, 0.1f, 0.0f);
-            transform.Rotate(transform.forward, angle);
+            transform.Rotate(Vector3.forward, -angle);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             //transform.position += new Vector3(0.0f, -0.1f, 0.0f);
-            transform.Rotate(transform.forward, -angle);
+            transform.Rotate(Vector3.forward, angle);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(transform.up, angle);
-            transform.Rotate(transform.right, -angle);
+            transform.Rotate(Vector3.up, angle);
+           // transform.Rotate(transform.right, -angle);
         }
         if (Input.GetKeyUp(KeyCode.RightArrow)) {
             this.transform.localEulerAngles = ang;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(transform.up,-angle);
-            transform.Rotate(transform.right, angle);
+            transform.Rotate(Vector3.up,-angle);
+           // transform.Rotate(transform.right, angle);
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
