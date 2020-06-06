@@ -16,6 +16,7 @@ public class bodyrotatescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(rot);
         if (rot < max_rotate)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
@@ -31,7 +32,18 @@ public class bodyrotatescript : MonoBehaviour
                 rot -= rot_air;
             }
         }
-    
+         if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+            transform.Rotate(Vector3.right, -rot);
+            rot = 0.0f;
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow)){
+            transform.Rotate(Vector3.right, -rot);
+            rot = 0.0f;
+        }
+        
+         
+         
+
 
     }
 }
