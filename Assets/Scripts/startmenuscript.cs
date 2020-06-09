@@ -17,7 +17,7 @@ public class startmenuscript : MonoBehaviour
         
     }
     public void ToTimeattack() {
-        SceneManager.LoadScene("TimeAttack");
+        SceneManager.LoadScene("TimeAttack_S1");
     }
     public void ToPvP() {
         //SceneManager.LoadScene("PvP");

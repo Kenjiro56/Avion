@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class FillItemScript : MonoBehaviour
 {
+    public float current_oil;
+    public int fillpoint = 50;
+    public aircraftcontroller controllerscript;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +21,7 @@ public class FillItemScript : MonoBehaviour
     }
      void OnTriggerEnter(Collider other)
     {
-        
+        controllerscript.filloil(fillpoint);
+        Destroy(gameObject);
     }
 }
