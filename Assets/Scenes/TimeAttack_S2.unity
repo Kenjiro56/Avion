@@ -496,6 +496,39 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.69676
       objectReference: {fileID: 0}
+    - target: {fileID: 1936952444415565911, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e66a3ae2f3ffb76458ae4c0d38010f1f,
+        type: 3}
+    - target: {fileID: 1936952444449366253, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e66a3ae2f3ffb76458ae4c0d38010f1f,
+        type: 3}
+    - target: {fileID: 1936952443850368510, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e66a3ae2f3ffb76458ae4c0d38010f1f,
+        type: 3}
+    - target: {fileID: 1936952443850368510, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936952443850368510, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936952443850368510, guid: 05d25424c9ca73341b18fab426a35194,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05d25424c9ca73341b18fab426a35194, type: 3}
 --- !u!1001 &218323180
@@ -1055,6 +1088,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24be8e1643b8a474fbb57fcda8a1c454, type: 3}
+--- !u!114 &869315038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1936952444449366253, guid: 05d25424c9ca73341b18fab426a35194,
+    type: 3}
+  m_PrefabInstance: {fileID: 208628434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &878797584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1672,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelabel: {fileID: 583753608}
-  Lapcount: {fileID: 0}
+  Lapcount: {fileID: 869315038}
 --- !u!65 &1837364474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1681,7 +1726,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837364472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1693,7 +1738,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837364472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
