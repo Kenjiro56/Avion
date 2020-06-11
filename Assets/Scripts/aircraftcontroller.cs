@@ -19,9 +19,14 @@ public class aircraftcontroller : MonoBehaviour
     float time = 0.0f;
     bool burstitemchecker = false;
     float bursttime=0.0f;
+    public AudioClip burst_se;
+    AudioSource audioSource;
+    bool gameovercheck =false;
+    float explosion_time=0.0f;
 
     void Start(){
         oilmeter = Maxoil;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +63,7 @@ public class aircraftcontroller : MonoBehaviour
             boostText.enabled = true;
             transform.Translate(Vector3.right* Time.deltaTime*-boost);
             oilmeter -= 0.5f; ;
+            audioSource.PlayOneShot(burst_se);
         }
         if (oilmeter <=0.0f) {
             SceneManager.LoadScene("GameOver");
@@ -69,11 +75,18 @@ public class aircraftcontroller : MonoBehaviour
             }
             bursttime += Time.deltaTime;
         }
+        if (gameovercheck)
+        {
+            explosion_time += Time.deltaTime;
+            if (explosion_time >= 2.0f) {
+
+                SceneManager.LoadScene("GameOver");
+
+            }
+        }
     }
     void OnCollisionEnter(Collision collision) {
-
-        SceneManager.LoadScene("GameOver");        
-        
+        gameovercheck = true;
     }
     private void OnTrggerEnter(Collider other)
     {
