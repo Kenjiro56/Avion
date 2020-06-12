@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 8153649831698614099}
   - component: {fileID: 8153649831698614098}
   - component: {fileID: 7642167784406650322}
+  - component: {fileID: 1791037631}
   m_Layer: 0
   m_Name: aircraft
   m_TagString: Untagged
@@ -345,7 +346,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8912972779322769161}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.7720485, y: 1, z: 8.74771}
@@ -362,10 +363,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf55ea9e43bbc3c4aa6f6c0da68d7d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  oil_gage: 10
+  speed: 1
   boost: 5
   boostText: {fileID: 0}
+  oilgage: {fileID: 0}
+  Maxoil: 200
+  burst_se: {fileID: 8300000, guid: ec5c2608867cb2747a91fb8f17ff6000, type: 3}
+  warning: {fileID: 0}
+  dangerimage: {fileID: 0}
 --- !u!82 &7642167784406650322
 AudioSource:
   m_ObjectHideFlags: 0
@@ -373,7 +378,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8912972779322769161}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -462,6 +467,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1791037631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912972779322769161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972d664f9f34bfb4594f5740d6a1a3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+  explosion: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  body: {fileID: 7985796654337739735}
 --- !u!1 &8913664422324006337
 GameObject:
   m_ObjectHideFlags: 0

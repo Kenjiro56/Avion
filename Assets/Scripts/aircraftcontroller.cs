@@ -23,10 +23,14 @@ public class aircraftcontroller : MonoBehaviour
     AudioSource audioSource;
     bool gameovercheck =false;
     float explosion_time=0.0f;
+    public Text warning;
+    public RawImage dangerimage;
 
     void Start(){
         oilmeter = Maxoil;
         audioSource = GetComponent<AudioSource>();
+        warning.enabled = false;
+        dangerimage.enabled = false;
     }
 
     // Update is called once per frame
@@ -78,6 +82,14 @@ public class aircraftcontroller : MonoBehaviour
         if (gameovercheck)
         {
             explosion_time += Time.deltaTime;
+            
+                    warning.enabled = true;
+                    dangerimage.enabled = true;
+            if (explosion_time >= 1.5f)
+            {
+                warning.enabled = false;
+                dangerimage.enabled = false;
+            }
             if (explosion_time >= 2.0f) {
 
                 SceneManager.LoadScene("GameOver");
