@@ -5,6 +5,7 @@ using UnityEngine;
 public class boostItemScript : MonoBehaviour
 {
     public aircraftcontroller controllerscript;
+    public GameObject boostitem;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,6 @@ public class boostItemScript : MonoBehaviour
     void OnTriggerEnter(Collider other) {
        
         controllerscript.burst();  
-        Destroy(gameObject);
+        Destroy(boostitem);
     }
 }

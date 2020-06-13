@@ -40,7 +40,7 @@ public class TimeChecker1 : MonoBehaviour
                 lapcount++;
                 break;
             case 2:
-                SceneManager.LoadScene("result");
+                SceneManager.LoadScene("result1");
                 break;                
 
         }
