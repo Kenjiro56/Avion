@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TimeChecker : MonoBehaviour
+public class TimeChecker2 : MonoBehaviour
 {
     public Text timelabel;
     public Text Lapcount;
