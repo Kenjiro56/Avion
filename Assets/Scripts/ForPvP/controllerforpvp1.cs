@@ -52,7 +52,7 @@ public class controllerforpvp1 : MonoBehaviour
             this.transform.Translate(Vector3.right * Time.deltaTime * -speed);
         }
 
-        if (Input.GetButton("Vertical_P" + AirID)) {
+        /*if (Input.GetButton("Vertical_P" + AirID)) {
             transform.Rotate(Vector3.forward, -angle);
         }
 
@@ -60,6 +60,25 @@ public class controllerforpvp1 : MonoBehaviour
         if (Input.GetButton("Horizontal_P" + AirID))
         {
             transform.Rotate(Vector3.up, angle);            
+        }*/
+        if (Input.GetKey("i"))
+        {
+            transform.Rotate(Vector3.forward, -angle);
+        }
+
+        if (Input.GetKey("k"))
+        {
+            transform.Rotate(Vector3.forward, angle);
+        }
+
+        if (Input.GetKey("l"))
+        {
+            transform.Rotate(Vector3.up, angle);
+        }
+
+        if (Input.GetKey("j"))
+        {
+            transform.Rotate(Vector3.up, -angle);
         }
 
         if (Input.GetButton("boost_P" + AirID)) {

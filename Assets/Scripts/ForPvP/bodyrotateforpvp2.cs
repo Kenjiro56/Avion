@@ -18,17 +18,33 @@ public class bodyrotateforpvp2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Mathf.Abs(rot) < max_rotate)
+
+        /*if (Mathf.Abs(rot) < max_rotate)
         {
             if (Input.GetButton("Horizontal_P" + AirID))
             {
                 transform.Rotate(Vector3.right, rot_air);
                 rot += rot_air;
             }
+        }*/
+        if (rot < max_rotate)
+        {
+            if (Input.GetKey("d"))
+            {
+                transform.Rotate(Vector3.right, rot_air);
+                rot += rot_air;
+            }
         }
-        
-        
+        if (rot > -max_rotate)
+        {
+            if (Input.GetKey("a"))
+            {
+                transform.Rotate(Vector3.right, -rot_air);
+                rot -= rot_air;
+            }
+        }
+
+
         if (rot > 0) {
             rot -= rot_speed;
             transform.Rotate(Vector3.right, -rot_speed);
