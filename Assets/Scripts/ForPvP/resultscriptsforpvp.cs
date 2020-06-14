@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class resultscriptsforpvp : MonoBehaviour{
     public Text resultime;
-    public static float Besttime = 0.0f; 
+    public static float Besttime = 0.0f;
+    public static int winner;
     
         // Start is called before the first frame update
     void Start(){
-        resultime.text = "Win！";
+        resultime.text = winner.ToString()+"P Win！";
 
     }
 

@@ -41,6 +41,11 @@ public class TimeCheckerforpvp : MonoBehaviour
                 lapcount++;
                 break;
             case 2:
+                if (other.gameObject.tag == "p1") {
+                    resultscriptsforpvp.winner = 1;
+                } else if (other.gameObject.tag == "p2") {
+                    resultscriptsforpvp.winner = 2;
+                }
                 SceneManager.LoadScene("PvPresult");
                 isRacing = false;
                 break;                

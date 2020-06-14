@@ -30,4 +30,7 @@ public class stageselectscript : MonoBehaviour
         Stage = 2;
         SceneManager.LoadScene("TimeAttack_S2");
     }
+    public void back() {
+        SceneManager.LoadScene("Start");
+    }
 }

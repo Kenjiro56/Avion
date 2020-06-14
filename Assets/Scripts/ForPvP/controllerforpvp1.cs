@@ -88,6 +88,7 @@ public class controllerforpvp1 : MonoBehaviour
             //audioSource.PlayOneShot(burst_se);
         }
         if (oilmeter <=0.0f) {
+            resultscriptsforpvp.winner = 1;
             SceneManager.LoadScene("PvPresult");
         }
         if (burstitemchecker) {
@@ -109,7 +110,7 @@ public class controllerforpvp1 : MonoBehaviour
                 dangerimage.enabled = false;
             }
             if (explosion_time >= 2.0f) {
-
+                resultscriptsforpvp.winner = 1;
                 SceneManager.LoadScene("PvPresult");
 
             }

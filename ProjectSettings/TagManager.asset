@@ -8,6 +8,8 @@ TagManager:
   - stage
   - boostitem
   - checker
+  - p1
+  - p2
   layers:
   - Default
   - TransparentFX
