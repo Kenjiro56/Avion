@@ -33,15 +33,8 @@ public class bodyrotatescript : MonoBehaviour
                 rot -= rot_air;
             }
         }
-        /*if (Input.GetKeyUp(KeyCode.LeftArrow)) {
-            transform.Rotate(Vector3.right, -rot);
-            rot = 0.0f;
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow)){
-            transform.Rotate(Vector3.right, -rot);
-            rot = 0.0f;
-        }*/
-        Debug.Log(rot);
+        
+        
         if (rot > 0) {
             rot -= rot_speed;
             transform.Rotate(Vector3.right, -rot_speed);

@@ -25,7 +25,9 @@ public class aircraftcontroller : MonoBehaviour
     float explosion_time=0.0f;
     public Text warning;
     public RawImage dangerimage;
+    public int hp = 2;
 
+    public Collider aircollider;
     void Start(){
         oilmeter = Maxoil;
         audioSource = GetComponent<AudioSource>();
@@ -42,8 +44,10 @@ public class aircraftcontroller : MonoBehaviour
         oilmeter -= 0.01f;
 
         boostText.enabled = false;
-        this.transform.Translate(Vector3.right * Time.deltaTime * -speed);
-
+        if ((stageselectscript.Stage ==1&&TimeChecker1.isRacing) ||(stageselectscript.Stage == 2 &&TimeChecker2.isRacing))
+        {
+            this.transform.Translate(Vector3.right * Time.deltaTime * -speed);
+        }
        
         if (Input.GetKey(KeyCode.UpArrow)) {
             transform.Rotate(Vector3.forward, -angle);
@@ -96,14 +100,20 @@ public class aircraftcontroller : MonoBehaviour
 
             }
         }
+        Debug.Log(hp);
     }
     void OnCollisionEnter(Collision collision) {
         gameovercheck = true;
     }
-    private void OnTrggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "fillitem") {
+    private void OnTrggerEnter(Collider other){
+        if (other.gameObject.tag == "fillitem"){
             oilmeter += 50;
+        }
+        if(other.gameObject.tag == "stage"){
+            hp--;
+            if (hp == 1){
+                aircollider.isTrigger = false;
+            }
         }
     }
     public void filloil(int fillpoint) {

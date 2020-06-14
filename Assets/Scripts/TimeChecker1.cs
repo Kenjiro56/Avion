@@ -11,20 +11,21 @@ public class TimeChecker1 : MonoBehaviour
     public static float time = 0.0f;
     int flag = 0;
     int lapcount = 1;
+    public static bool isRacing;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        isRacing = false;
+        time = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        
+        if (isRacing){
             time += Time.deltaTime;
+        }
             timelabel.text = "Time:" + time.ToString("f2");
             Lapcount.text = "LapCount:" + lapcount.ToString();
         
@@ -41,6 +42,7 @@ public class TimeChecker1 : MonoBehaviour
                 break;
             case 2:
                 SceneManager.LoadScene("result1");
+                isRacing = false;
                 break;                
 
         }
