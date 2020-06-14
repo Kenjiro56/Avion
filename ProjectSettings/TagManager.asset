@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - stage
+  - boostitem
+  - checker
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class startmenuscript : MonoBehaviour
         SceneManager.LoadScene("stageselectTA");
     }
     public void ToPvP() {
-        //SceneManager.LoadScene("PvP");
+        SceneManager.LoadScene("PvP_S1");
     }
 }
 
