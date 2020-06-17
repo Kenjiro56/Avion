@@ -26,6 +26,7 @@ public class aircraftcontroller : MonoBehaviour
     AudioSource audioSource;        
     bool gameovercheck =false;      //接触チェック
     float explosion_time=0.0f;      //接触してからの時間カウント
+    public GameObject wind;
     
 
     void Start(){
@@ -44,7 +45,7 @@ public class aircraftcontroller : MonoBehaviour
         oilmeter -= 0.01f;
 
         boostText.enabled = false;
-
+        wind.SetActive(false);
 
         if ((stageselectscript.Stage ==1&&TimeChecker1.isRacing) ||(stageselectscript.Stage == 2 &&TimeChecker2.isRacing))
         {
@@ -80,8 +81,9 @@ public class aircraftcontroller : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             boostText.enabled = true;
             transform.Translate(Vector3.right* Time.deltaTime*-boost);
-            oilmeter -= 0.5f; ;
-           // audioSource.PlayOneShot(burst_se);
+            oilmeter -= 0.5f;
+            wind.SetActive(true);
+            // audioSource.PlayOneShot(burst_se);
         }
 
         //oilmeterが0になったときの処理
