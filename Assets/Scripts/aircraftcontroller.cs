@@ -38,7 +38,7 @@ public class aircraftcontroller : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-
+  
         time += Time.deltaTime;
         oilgage.maxValue = Maxoil;
         oilgage.value = oilmeter;
