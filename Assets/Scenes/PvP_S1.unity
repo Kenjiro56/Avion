@@ -217,18 +217,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239518170}
   m_CullTransparentMesh: 0
---- !u!114 &253649799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8153649831698614098, guid: 23acda45969eee54c959ea16ebf1980c,
-    type: 3}
-  m_PrefabInstance: {fileID: 762982829953103961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762982829953103962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf55ea9e43bbc3c4aa6f6c0da68d7d5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &293203164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1936952444415565911, guid: 05d25424c9ca73341b18fab426a35194,
@@ -1324,7 +1312,8 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8153649831698614098, guid: 23acda45969eee54c959ea16ebf1980c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23acda45969eee54c959ea16ebf1980c, type: 3}
 --- !u!65 &874811966 stripped
 BoxCollider:
@@ -2725,7 +2714,7 @@ PrefabInstance:
         type: 3}
       propertyPath: controllerscript
       value: 
-      objectReference: {fileID: 253649799}
+      objectReference: {fileID: 0}
     - target: {fileID: 749996739157700011, guid: 2df4a7368b605d14094070e7e9447572,
         type: 3}
       propertyPath: boostitem
@@ -3139,11 +3128,11 @@ GameObject:
   - component: {fileID: 2140638945}
   - component: {fileID: 2140638944}
   - component: {fileID: 2140638943}
-  - component: {fileID: 2140638947}
   - component: {fileID: 2140638948}
+  - component: {fileID: 2140638947}
   m_Layer: 0
   m_Name: startgoalchecker
-  m_TagString: Untagged
+  m_TagString: checker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,11 +3218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2140638942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 216e6a0ef22056246a840a2f3ca9c9ad, type: 3}
+  m_Script: {fileID: 11500000, guid: aa79051a737950b48a84b6510ca24ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timelabel: {fileID: 293203164}
-  Lapcount: {fileID: 326478950}
 --- !u!114 &2140638948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3389,6 +3377,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8153649831698614099, guid: 23acda45969eee54c959ea16ebf1980c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8153649831698614097, guid: 23acda45969eee54c959ea16ebf1980c,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -3404,7 +3397,8 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8153649831698614098, guid: 23acda45969eee54c959ea16ebf1980c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23acda45969eee54c959ea16ebf1980c, type: 3}
 --- !u!1 &762982829953103962 stripped
 GameObject:
@@ -3791,7 +3785,7 @@ PrefabInstance:
         type: 3}
       propertyPath: controllerscript
       value: 
-      objectReference: {fileID: 253649799}
+      objectReference: {fileID: 0}
     - target: {fileID: 4959935010292743674, guid: 1adf530cb394ef94898eb840f1814b32,
         type: 3}
       propertyPath: fillitem

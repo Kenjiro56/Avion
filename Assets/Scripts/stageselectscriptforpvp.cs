@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class stageselectscriptforpvp : MonoBehaviour
 {
+    public GameObject panel;
     //public static int Stage;
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,11 @@ public class stageselectscriptforpvp : MonoBehaviour
     
     public void back() {
         SceneManager.LoadScene("Start");
+    }
+    public void howto() {
+        panel.SetActive(true);
+    }
+    public void close() {
+        panel.SetActive(false);
     }
 }

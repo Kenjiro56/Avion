@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class TimeCheckerforpvp : MonoBehaviour
 {
     public Text timelabel;
-    public Text Lapcount;
+    //public Text Lapcount;
     public static float time = 0.0f;
     int flag = 0;
-    int lapcount = 1;
+    //int lapcount = 1;
     public static bool isRacing;
    
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class TimeCheckerforpvp : MonoBehaviour
             time += Time.deltaTime;
         }
             timelabel.text = "Time:" + time.ToString("f2");
-            Lapcount.text = "LapCount:" + lapcount.ToString();
+            
         
         }
 
@@ -38,7 +38,7 @@ public class TimeCheckerforpvp : MonoBehaviour
                 break;
             case 1:
                 flag++;
-                lapcount++;
+                //lapcount++;
                 break;
             case 2:
                 if (other.gameObject.tag == "p1") {

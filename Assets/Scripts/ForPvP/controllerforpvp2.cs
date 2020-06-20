@@ -20,8 +20,7 @@ public class controllerforpvp2 : MonoBehaviour
     float time = 0.0f;
     bool burstitemchecker = false;
     float bursttime=0.0f;
-    //public AudioClip burst_se;
-    //AudioSource audioSource;
+    
     bool gameovercheck =false;
     float explosion_time=0.0f;
     public Text warning;
@@ -120,6 +119,7 @@ public class controllerforpvp2 : MonoBehaviour
         }
         else if (other.gameObject.tag == "checker") {
             lapcount++;
+            Debug.Log(2);
         }
         
     }
