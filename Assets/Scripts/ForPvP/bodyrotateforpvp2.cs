@@ -19,14 +19,7 @@ public class bodyrotateforpvp2 : MonoBehaviour
     void Update()
     {
 
-        /*if (Mathf.Abs(rot) < max_rotate)
-        {
-            if (Input.GetButton("Horizontal_P" + AirID))
-            {
-                transform.Rotate(Vector3.right, rot_air);
-                rot += rot_air;
-            }
-        }*/
+        
         if (rot < max_rotate)
         {
             if (Input.GetKey("d"))

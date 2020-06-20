@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class stageselectscript : MonoBehaviour
 {
+    public GameObject panel;
     public Text best_s1;
     public Text best_s2;
     public static int Stage;
@@ -29,6 +30,12 @@ public class stageselectscript : MonoBehaviour
     {
         Stage = 2;
         SceneManager.LoadScene("TimeAttack_S2");
+    }
+    public void howto() {
+        panel.SetActive(true);
+    }
+    public void close() {
+        panel.SetActive(false);
     }
     public void back() {
         SceneManager.LoadScene("Start");
